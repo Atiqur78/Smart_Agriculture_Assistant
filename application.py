@@ -8,8 +8,8 @@ import string
 import random
 
 ## API key(hugging face & OpenAI)
-hugging_api = "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"
-openai_api = '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'
+hugging_api = os.environ.get('HUGGINGFACE_API_KEY')
+openai_api = os.environ.get('OPENAI_API_KEY')
 
 openai.api_key = openai_api
 application = Flask(__name__)
