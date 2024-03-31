@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agri Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <meta name="description" content="This is an Agriculture chatbot that helps farmers to make write desitions." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel ="stylesheet" href="/static/styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1><u>Agri Help Chatbot</u></h1>
+        <h3>आपका कृषि साथी!</h3>
+        <div class="row chat-container" id="chat-container"></div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input type="text" class="form-control" id="user-input" placeholder="Type your message...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block" id="send-btn">Send</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary btn-block" id="record-btn">Record</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <audio id="audio" controls></audio>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>
