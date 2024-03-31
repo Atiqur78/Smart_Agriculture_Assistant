@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template, request, jsonify,url_for
 from werkzeug.utils import secure_filename
-import os
 import openai
 import requests
 from gtts import gTTS
@@ -9,10 +8,10 @@ import string
 import random
 
 ## API key(hugging face & OpenAI)
-api_token ="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"
-openai.api_key = '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'
+hugging_api = os.environ.get('HUGGINGFACE_API_KEY')
+openai_api = os.environ.get('OPENAI_API_KEY')
 
-
+openai.api_key = openai_api
 application = Flask(__name__)
 app = application
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -69,7 +68,7 @@ def allowed_file(filename):
 ## for processing audio
 def process_audio(filepath):
     API_URL = "https://api-inference.huggingface.co/models/facebook/wav2vec2-base-960h"
-    headers = {"Authorization": f"Bearer {api_token}"}
+    headers = {"Authorization": f"Bearer {hugging_api}"}
     with open(filepath, "rb") as f:
         data = f.read()
     response = requests.post(API_URL, headers=headers, data=data)
