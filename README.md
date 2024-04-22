@@ -1,7 +1,3 @@
-Sure, here's a formatted version of the README:
-
----
-
 # Agriculture Chatbot
 
 This is a simple agriculture chatbot built using Flask, OpenAI, and Hugging Face. The chatbot can answer questions related to agriculture.
