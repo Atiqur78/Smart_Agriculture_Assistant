@@ -1,0 +1,21 @@
+body {
+    background-image: url('/static/images/krishi.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}
+
+#chat-container {
+    height: 60vh;
+    overflow-y: auto;
+}
+
+#user-input {
+    margin-bottom: 10px;
+}
